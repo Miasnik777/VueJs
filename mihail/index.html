@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Изучаем Vue 3</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="app">
+    <p>{{a > b?'a>b':'a < b' }}</p>
+  <p>{{hi()}}</p>
+  <div v-text="a"></div>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script>
+Vue.createApp({
+  data() {
+    return {
+      a:5,
+      b:7
+    }
+
+  },
+   methods:{
+hi(){
+  return `Привет, меня зовут ${this.a}`
+}
+   }
+ 
+}).mount('#app');
+</script>
+</body>
+</html>
